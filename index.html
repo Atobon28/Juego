@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="name-section" class="name-section">
+            <h1>Punto de quiebre: Rediseñando el futuro</h1>
+            <div id="intro-section" class="intro-section">
+                <h2>Introducción</h2>
+                <img src="./img/INTRO.jpeg" alt="Imagen introductoria" style="width:100%; max-width:400px;">
+                <p> La empresa SoundSphere Innovations te ha contratado a ti y a tu equipo para rediseñar su nueva línea de auriculares con el objetivo de optimizar la producción y mejorar la experiencia del usuario. Tu desafío es encontrar la mejor combinación para el mercado, considerando todos los factores que afectan el éxito del producto.</p>
+            </div>
+            <p>Diseñador, ingresa tu nombre para comenzar:</p>
+            <input type="text" id="user-name" placeholder="Ingresa tu nombre" autocomplete="off">
+            
+            <button onclick="startGame()">Iniciar Diseño...</button>
+        </div>
+
+        
+
+        <div id="game-section" class="question-section" style="display:none;">
+            <h2>Pregunta</h2>
+            <p id="question-text"></p>
+            <img id="question-image" src="" alt="Imagen de la pregunta">
+            <div>
+                <label>
+                    <input type="radio" name="answer" value="0">
+                    <span id="answer-1"></span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="1">
+                    <span id="answer-2"></span>
+                </label>
+            </div>
+            <textarea id="justification" placeholder="Escribe tu justificación"></textarea>
+            <br>
+            <button onclick="nextQuestion()">Siguiente</button>
+        </div>
+
+        <div id="result-section" class="result-section" style="display:none;">
+            <h2>Resultados</h2>
+            <p id="result-message"></p>
+            <button onclick="restartGame()">Reiniciar Juego</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
